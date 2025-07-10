@@ -224,6 +224,22 @@ contract EcommerceStore{
         stores[productIdInStore[_productId]][_productId] = product;
     }
 
+    function becomeArbiter(uint _productId) public payable{
+        Escrow(productEscrow[_productId]).becomeArbiter.value(msg.value)(msg.sender);
+    }
+
+    function cancelArbiter(uint _productId) public{
+        Escrow(productEscrow[_productId]).cancelArbiter(msg.sender);
+    }
+
+    function burnDepositOfArbiter(uint _productId) public{
+         Escrow(productEscrow[_productId]).burnDepositOfArbiter();
+    }
+
+    function feedback(uint _productId,uint _score) public{
+         Escrow(productEscrow[_productId]).feedback(msg.sender, _score);
+    }
+
 
     function getEscrowAddressByProductId(uint _productId) public view returns(address){
         return productEscrow[_productId];
@@ -236,12 +252,22 @@ contract EcommerceStore{
         address,
         bool,
         uint,
+        uint,
+        uint,
+        uint,
         uint){
         return Escrow(productEscrow[_productId]).escrowInfo(); 
     }
 
 
 
+    function releaseAmountToSeller(uint _productId) public {
+        Escrow(productEscrow[_productId]).releaseAmountToSeller(msg.sender);
+    }
+    
+    function refoundAmountToBuyer(uint _productId) public {
+        Escrow(productEscrow[_productId]).refoundAmountToBuyer(msg.sender);
+    }
 
 
     function stringToUint(string memory _str) internal pure returns (uint) {
