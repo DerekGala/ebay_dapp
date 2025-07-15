@@ -95,7 +95,6 @@ contract EcommerceStore{
 
         //stores[msg.sender][productIndex] = product; 
         productIdInStore[productIndex] = msg.sender;
-        productCount += 1;
         emit NewProduct(
             product.id,
             product.name,
