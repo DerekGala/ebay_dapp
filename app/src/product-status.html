@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Product Status - Decentralized Ecommerce Store</title>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type='text/css'>
+ <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+ <link href='./styles.css' rel='stylesheet' type='text/css'>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="./index.js"></script>
+</head>
+<body>
+ <div class="container">
+  <h1 class="text-center">Product Status Management</h1>
+  <div class="container">
+   <div class="row">
+    <div style="display: none;" class="alert alert-success" id="msg"></div>
+    <div style="display: none;" class="alert alert-danger" id="error-msg"></div>
+    
+    <!-- Product Search -->
+    <div class="col-sm-12">
+     <div class="panel panel-primary">
+      <div class="panel-heading">
+       <h3 class="panel-title">Search Product Status</h3>
+      </div>
+      <div class="panel-body">
+       <form id="product-status-form">
+        <div class="form-group">
+         <label for="status-product-id">Product ID</label>
+         <input type="number" class="form-control" id="status-product-id" placeholder="Enter product ID" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Get Product Status</button>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Product Status Display -->
+   <div class="row">
+    <div class="col-sm-12">
+     <div id="product-status-display"></div>
+    </div>
+   </div>
+
+   <!-- Product Actions -->
+   <div class="row">
+    <div class="col-sm-12">
+     <div id="product-actions"></div>
+    </div>
+   </div>
+
+   <!-- Navigation -->
+   <div class="row">
+    <div class="col-sm-12 text-center">
+     <div class="btn-group" role="group">
+      <a href="index.html" class="btn btn-default">Back to Store</a>
+      <a href="dashboard.html" class="btn btn-success">My Dashboard</a>
+      <a href="arbiter.html" class="btn btn-info">Arbiter Management</a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</body>
+</html> 

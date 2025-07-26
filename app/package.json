@@ -12,9 +12,13 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
+    "style-loader": "^2.0.0",
+    "css-loader": "^5.2.7",
     "mongoose": "4.11.7" 
   },
   "dependencies": {
-    "web3": "^1.2.4"
+    "web3": "^1.2.4",
+    "ipfs-api": "^26.1.2",
+    "truffle-contract": "^4.0.31"
   }
 }

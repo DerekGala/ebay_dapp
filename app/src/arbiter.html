@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Arbiter Management - Decentralized Ecommerce Store</title>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type='text/css'>
+ <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+ <link href='./styles.css' rel='stylesheet' type='text/css'>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="./index.js"></script>
+</head>
+<body>
+ <div class="container">
+  <h1 class="text-center">Arbiter Management</h1>
+  <div class="container">
+   <div class="row">
+    <div style="display: none;" class="alert alert-success" id="msg"></div>
+    <div style="display: none;" class="alert alert-danger" id="error-msg"></div>
+    
+    <!-- Become Arbiter Section -->
+    <div class="col-sm-6">
+     <div class="panel panel-primary">
+      <div class="panel-heading">
+       <h3 class="panel-title">Become an Arbiter</h3>
+      </div>
+      <div class="panel-body">
+       <form id="become-arbiter-form">
+        <div class="form-group">
+         <label for="arbiter-product-id">Product ID</label>
+         <input type="number" class="form-control" id="arbiter-product-id" placeholder="Enter product ID" required>
+        </div>
+        <div class="form-group">
+         <label for="arbiter-deposit">Deposit Amount (ETH)</label>
+         <input type="number" class="form-control" id="arbiter-deposit" placeholder="Minimum 5 ETH" step="0.1" required>
+         <small class="text-muted">Minimum deposit: 5 ETH</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Become Arbiter</button>
+       </form>
+      </div>
+     </div>
+    </div>
+
+    <!-- Cancel Arbiter Section -->
+    <div class="col-sm-6">
+     <div class="panel panel-warning">
+      <div class="panel-heading">
+       <h3 class="panel-title">Cancel Arbiter Role</h3>
+      </div>
+      <div class="panel-body">
+       <form id="cancel-arbiter-form">
+        <div class="form-group">
+         <label for="cancel-product-id">Product ID</label>
+         <input type="number" class="form-control" id="cancel-product-id" placeholder="Enter product ID" required>
+        </div>
+        <button type="submit" class="btn btn-warning">Cancel Arbiter Role</button>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Burn Deposit Section -->
+   <div class="row">
+    <div class="col-sm-6">
+     <div class="panel panel-danger">
+      <div class="panel-heading">
+       <h3 class="panel-title">Burn Arbiter Deposit</h3>
+      </div>
+      <div class="panel-body">
+       <form id="burn-deposit-form">
+        <div class="form-group">
+         <label for="burn-product-id">Product ID</label>
+         <input type="number" class="form-control" id="burn-product-id" placeholder="Enter product ID" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Burn Deposit</button>
+        <small class="text-muted">Only contract creator can burn deposits for malicious behavior</small>
+       </form>
+      </div>
+     </div>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="col-sm-6">
+     <div class="panel panel-success">
+      <div class="panel-heading">
+       <h3 class="panel-title">Rate Seller</h3>
+      </div>
+      <div class="panel-body">
+       <form id="feedback-form">
+        <div class="form-group">
+         <label for="feedback-product-id">Product ID</label>
+         <input type="number" class="form-control" id="feedback-product-id" placeholder="Enter product ID" required>
+        </div>
+        <div class="form-group">
+         <label for="feedback-score">Rating (1-10)</label>
+         <select class="form-control" id="feedback-score" required>
+          <option value="">Select rating</option>
+          <option value="1">1 - Very Poor</option>
+          <option value="2">2 - Poor</option>
+          <option value="3">3 - Below Average</option>
+          <option value="4">4 - Average</option>
+          <option value="5">5 - Above Average</option>
+          <option value="6">6 - Good</option>
+          <option value="7">7 - Very Good</option>
+          <option value="8">8 - Excellent</option>
+          <option value="9">9 - Outstanding</option>
+          <option value="10">10 - Perfect</option>
+         </select>
+        </div>
+        <button type="submit" class="btn btn-success">Submit Rating</button>
+        <small class="text-muted">Only the buyer can rate the seller after funds are disbursed</small>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Arbiter Status Section -->
+   <div class="row">
+    <div class="col-sm-12">
+     <div class="panel panel-info">
+      <div class="panel-heading">
+       <h3 class="panel-title">Escrow Information</h3>
+      </div>
+      <div class="panel-body">
+       <form id="escrow-info-form">
+        <div class="form-group">
+         <label for="escrow-info-product-id">Product ID</label>
+         <input type="number" class="form-control" id="escrow-info-product-id" placeholder="Enter product ID" required>
+        </div>
+        <button type="submit" class="btn btn-info">Get Escrow Info</button>
+       </form>
+       <div id="escrow-info-display" class="mt-3"></div>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <!-- Navigation -->
+   <div class="row">
+    <div class="col-sm-12 text-center">
+     <a href="index.html" class="btn btn-default">Back to Store</a>
+     <a href="product.html" class="btn btn-default">Product Details</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</body>
+</html> 

@@ -4,6 +4,7 @@
  <title>Decentralized Ecommerce Store</title>
  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+ <link href='./styles.css' rel='stylesheet' type='text/css'>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="./index.js"></script>
 </head>
@@ -57,14 +58,19 @@
      </form>
         <div id="product-status"></div>
         <div id="escrow-info">
-        <div id="buyer"></div>
-        <div id="seller"></div>
-        <div id="arbiter"></div>
-        <div id="release-count"></div>
-        <div id="refund-count"></div>
-         <div id="escrow-operations">
-            <a id="release-funds" class="btn form-submit">Release Amount to Seller</a>
-            <a id="refund-funds" class="btn form-submit">Refund Amount to Buyer</a>
+        <div class="well">
+          <h4>Escrow Information</h4>
+          <div id="buyer"></div>
+          <div id="seller"></div>
+          <div id="arbiter"></div>
+          <div id="release-count"></div>
+          <div id="refund-count"></div>
+          <div id="escrow-operations">
+            <div class="btn-group" role="group">
+              <a id="release-funds" class="btn btn-success">Release Amount to Seller</a>
+              <a id="refund-funds" class="btn btn-warning">Refund Amount to Buyer</a>
+            </div>
+          </div>
         </div>
         </div>
      </div>
